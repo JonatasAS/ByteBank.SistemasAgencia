@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _06_ByteBank
+namespace ByteBank.Modelos
 {
     internal class OperacaoFinanceiraException : Exception
     {

@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using ByteBank.Sistemas;
 
-namespace ByteBank
+namespace ByteBank.Modelos
 {
     internal class ParceiroComercial : IAutenticavel
     {       

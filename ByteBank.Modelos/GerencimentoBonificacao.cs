@@ -5,7 +5,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ByteBank
+namespace ByteBank.Modelos
+
 {
     internal class GerencimentoBonificacao
     {

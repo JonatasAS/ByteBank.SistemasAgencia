@@ -1,7 +1,8 @@
 ﻿
 using System;
 
-namespace _06_ByteBank 
+namespace ByteBank.Modelos
+    
 {
     public class ContaCorrente
     {
