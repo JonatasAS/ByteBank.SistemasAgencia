@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ByteBank.Sistemas
+namespace ByteBank.Modelos
 {
     internal interface IAutenticavel 
     {

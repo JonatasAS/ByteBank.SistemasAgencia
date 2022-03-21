@@ -8,5 +8,9 @@ namespace ByteBank.Modelos
 {
     internal class AutenticarHelper
     {
+        public bool CompararSenhas(string senhaVerdadeira, string senhaTentativa)
+        {
+            return senhaVerdadeira == senhaTentativa;
+        }
     }
 }
