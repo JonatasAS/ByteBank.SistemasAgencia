@@ -1,4 +1,4 @@
-﻿using ByteBank.Sistemas;
+﻿using ByteBank.Modelos;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,7 +18,7 @@ namespace ByteBank.Funcionarios
         {
             Salario *= 1.15;
         }
-        public override double GetBonificacao() //Ira sobrepor o metodo
+        internal protected override double GetBonificacao() //Ira sobrepor o metodo
         {
             return Salario * 0.5;
         }

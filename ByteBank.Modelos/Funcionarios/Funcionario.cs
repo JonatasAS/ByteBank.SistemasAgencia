@@ -26,8 +26,7 @@ namespace ByteBank.Funcionarios
         //Metodos abstratos
         public abstract void AumentarSalario();
        
-        public abstract double GetBonificacao();//Permitir alteração do metedo de uma classe herdada
-        
-
+        internal protected abstract double GetBonificacao();//Permitir alteração do metedo de uma classe herdada
+       
     }
 }

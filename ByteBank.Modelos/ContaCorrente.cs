@@ -4,6 +4,9 @@ using System;
 namespace ByteBank.Modelos
     
 {
+    /// <summary>
+    /// Define uma Conta Corrente do banco Byte Bank.
+    /// </summary>
     public class ContaCorrente
     {
         public static int TaxaOperacao { get; set; }        
@@ -12,7 +15,14 @@ namespace ByteBank.Modelos
         public  int Agencia { get; }  //somente leitura           
         public int Numero { get; } // somente leitura
         public int ContadorSaquesNaoPermitidos { get; private set; }  
-        public int ContadorTransferenciasNaoPermitidas { get; private set; }    
+        public int ContadorTransferenciasNaoPermitidas { get; private set; }
+
+        /// <summary>
+        /// Cria um instância de ContaCorrente com os argumentos utilizados.
+        /// </summary>
+        /// <param name="agencia"> Representa o valor da propriedade <see cref="Agencia" /> e deve possuir um valor maior que zero </param>
+        /// <param name="numero"> Representa o valor da propriedade <see cref="Numero"/> e deve possuir um valor maior que zero </param>
+        /// <exception cref="ArgumentException"></exception>
         public ContaCorrente(int agencia, int numero) 
         {
             // Exceção 
