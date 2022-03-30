@@ -9,7 +9,7 @@ namespace ByteBank.Modelos
     /// </summary>
     public class ContaCorrente
     {
-        public static int TaxaOperacao { get; set; }        
+        private static int TaxaOperacao;        
         public Cliente Titular { get; set; } 
         public static int TotalDeContasCriadas { get; private set; } 
         public  int Agencia { get; }  //somente leitura           
@@ -60,6 +60,13 @@ namespace ByteBank.Modelos
             }
         }
         //função
+
+        /// <summary>
+        /// Realiza o saque e atualiza o valor da propriedade <see cref="Saldo"/>
+        /// </summary>
+        /// <param name="valor">Representa o valor do saque, deve ser maior que 0 e menor que <see cref="Saldo"/></param>
+        /// <exception cref="ArgumentException">Exceção lançada quando um valor negatico é utilizado no argumento <paramref name="valor"/>. </exception>
+        /// <exception cref="SaldoInsuficienteException">Exceção lançada quando o valor de <paramref name="valor"/> é maior que o valor da propriedade <see cref="Saldo"/>. </exception>
         public void Sacar(double valor)                                        
         {
             if (valor < 0)
