@@ -7,15 +7,41 @@ using ByteBank.Modelos;
 
 namespace ByteBank.SistemaAgencia
 {
-    internal class Program
+    class Program
     {
         static void Main(string[] args)
         {
-            ContaCorrente conta = new ContaCorrente(451, 785458);
+            DateTime dataFimPagamento = new DateTime(2022, 7, 22);
+            DateTime dataCorrente = DateTime.Now;
 
-            Console.WriteLine(conta.Numero);
+            TimeSpan diferenca = dataFimPagamento - DateTime.Now;
+
+            string mensagem = "Vencimento em " + GetIntervaloDeTempoLegivel(diferenca);
+
+            Console.WriteLine(mensagem);
+
+            Console.WriteLine(dataCorrente);
+            Console.WriteLine(dataFimPagamento);
 
             Console.ReadLine();
-        }        
+        } 
+        
+        static string GetIntervaloDeTempoLegivel(TimeSpan timeSpan)
+        {
+            if (timeSpan.Days > 30)
+            {
+                int quantidadeMeses = timeSpan.Days / 30;
+                if (quantidadeMeses == 1)
+                {
+                    return "1 mês";
+                }
+                return quantidadeMeses + "Meses";                
+            }
+            else if (timeSpan.Days > 7)
+            {
+                int quantidadeSemanas = timeSpan.Days / 7;
+            }
+            return timeSpan.Days + " dias";
+        }
     }
 }
